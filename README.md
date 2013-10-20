@@ -48,6 +48,10 @@ body = tocify_string(''.join(orig))
 body = tocify_file_list(['list', 'of', 'markdown', 'files'])
 ```
 
+#License
+
+LGPL3, see LICENSE
+
 #Credits
 
 This is a Python version of the nodejs [doctoc](https://github.com/thlorenz/doctoc).
