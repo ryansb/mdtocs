@@ -64,6 +64,8 @@ def tocify_file_list(fnames):
 
 def find_files(names, recurse):
     if not len(names):
+        if not recurse:
+            names = [f for f in os.listdir(os.getcwd()) if os.path.isfile(f)]
         names = os.listdir(os.getcwd())
     for name in [n for n in names if os.path.exists(n)]:
         if os.path.isfile(name) and (name.endswith('.md')
@@ -75,6 +77,11 @@ def find_files(names, recurse):
                 for f in files:
                     if f.endswith('.md') or f.endswith('.markdown'):
                         yield os.path.join(path, f)
+        if os.path.isdir(name) and not recurse:
+            for f in os.listdir(name):
+                if os.path.isfile(f) and (name.endswith('.md')
+                                          or name.endswith('.markdown')):
+                    yield f
 
 
 def run_tests():
