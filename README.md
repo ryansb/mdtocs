@@ -7,23 +7,12 @@ to Python using only the standard library.
 
 #Installation
 
-`pip install mdtocs`
-
-##Or
-
 `pip install git+https://github.com/ryansb/mdtocs/`
 
 ##Or
 
 ```
 $ curl -s -L https://raw.github.com/ryansb/mdtocs/master/mdtocs/__init__.py > ~/bin/mdtocs
-$ chmod a+x ~/bin/mdtocs
-```
-
-##Or
-
-```
-$ curl -s -L http://mdtocs.rsb.io/mdtocs > ~/bin/mdtocs
 $ chmod a+x ~/bin/mdtocs
 ```
 
