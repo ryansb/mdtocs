@@ -34,9 +34,8 @@ setup(
     install_requires=[
         "",
     ],
-    #TODO: Deal with entry_points
-    #entry_points="""
-    #[console_scripts]
-    #mdtocs = mdtocs:parse_args
-    #"""
+    entry_points="""
+    [console_scripts]
+    mdtocs = mdtocs:main
+    """
 )
