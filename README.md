@@ -15,11 +15,17 @@ to Python using only the standard library.
 
 ##Or
 
-`curl -s -L https://raw.github.com/ryansb/mdtocs/master/mdtocs/__init__.py > ~/bin/mdtocs && chmod a+x ~/bin/mdtocs`
+```
+$ curl -s -L https://raw.github.com/ryansb/mdtocs/master/mdtocs/__init__.py > ~/bin/mdtocs
+$ chmod a+x ~/bin/mdtocs
+```
 
 ##Or
 
-`curl -s -L http://mdtocs.rsb.io/mdtocs > ~/bin/mdtocs && chmod a+x ~/bin/mdtocs`
+```
+$ curl -s -L http://mdtocs.rsb.io/mdtocs > ~/bin/mdtocs
+$ chmod a+x ~/bin/mdtocs
+```
 
 
 #Usage
@@ -38,19 +44,19 @@ $ mdtocs -r README.md LICENSE.md content/ tutorials/
 ##From Python
 
 ```python
-    from mdtocs import tocify, tocify_file_list, tocify_string, tocify_split
+from mdtocs import tocify, tocify_file_list, tocify_string, tocify_split
 
-    orig = [
-        "#a markdown doc with headers\n",
-        "\n",
-        "Separated into lines\n",
-    ]
+orig = [
+    "#a markdown doc with headers\n",
+    "\n",
+    "Separated into lines\n",
+]
 
-    toc, body = tocify_split(orig)
+toc, body = tocify_split(orig)
 
-    body = tocify_string(''.join(orig))
+body = tocify_string(''.join(orig))
 
-    body = tocify_file_list(['list', 'of', 'markdown', 'files'])
+body = tocify_file_list(['list', 'of', 'markdown', 'files'])
 ```
 
 #Credits
